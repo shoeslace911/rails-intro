@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+</head>
+<body>
+  <h1>WOW</h1>
+  <ol>
+  <%#  use an @ sign to access instnance variables the home file name talks to def home from the controller %>
+  <% @members.each do |member|%>
+  <li><%=  member
+  raise %></li>
+  <% end %>
+  </ol>
+  <h1>The time now is <%= Time.now %></h1>
+
+  <%# linking time %>
+  <%= link_to("Contact us", contact_path)%>
+  <form action="/home">
+  <input name="member" type="text">
+  <input type="submit">
+
+</form>
+  <%# first parameter is what you want it to say, second is the path %>
+</body>
+</html>
